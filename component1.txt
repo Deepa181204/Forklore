@@ -1,0 +1,78 @@
+component1.js
+let [name,setName] = usestate('icr")
+[count, setCount] = (0)
+log(name)
+log(count)
+<button onclick= { ()=>setName("CHINNA)> click </button>
+<component2></component2>
+<component3></component3>
+
+cache memory lo store ayyi unnadhe malla malla render aitadi
+so that vere anosaram aina components malla render kaavu
+
+useCallBack (()=>{}[])
+useCallBack Hook
+it i sa built in function that catches and returns a memoized version of a call back function
+it prevents re creation of functions
+it prevents re render of child components
+it improves efficiency
+
+
+syntax:
+const memoizedCallBack = useCallBack(
+    ()=>{
+        //function logic
+    },
+    [dependencies]
+);
+
+useCallBack takes two arguements:
+a callback function to be memoized
+a dependency array that determines when the function should be re created
+
+useMemo Hook
+it is a built in function that caches and returns a memoized value
+it prevents re calculations
+
+()=>{
+    let c= a+b
+    return c
+}
+
+we hold the value of the particular function in the cache so that not every time the same value is 
+calculated
+
+useCallBack
+memoizes functions returns a memoized function
+prevents unnecessary function recreation
+
+useMemo
+memoizes value
+returns a memoized value
+prevents unnecessary calculations
+
+
+
+
+
+
+import React, {useState, useCallBack} from 'React'
+ const CompOne = ()=> {
+ let[count, setcount]= usestate(0)
+ console.log(useCallBack(()=>{
+
+ },[]))
+
+ console.log(useMemo(()=>{
+    let c = 70
+    return c
+ },[]))
+
+ return (
+    <div>
+    <h1> {count}</h1>
+
+ )
+ }
+ 
+component 2 anedhi initial ga matrame render avvali malli malli render avvodhu
